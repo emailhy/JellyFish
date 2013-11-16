@@ -27,12 +27,12 @@ void TriangleWindow::initialize()
     QOpenGLShader *fshader1 = new QOpenGLShader(QOpenGLShader::Fragment, &m_program);
     fshader1->compileSourceFile(":/oglwindows/shaders/shader.frag");
 
-    m_program.addShader(vshader1);
-    m_program.addShader(fshader1);
-    m_program.link();
+   // m_program.addShader(vshader1);
+   // m_program.addShader(fshader1);
+   // m_program.link();
 
     vertexAttr1 = m_program.attributeLocation("vVertex");
-    QString fileName = QString("c:/images/target.jpg");
+    /*QString fileName = QString("c:/images/target.jpg");
     QImage testimg(fileName);
     int texture_width = testimg.width();
     int texture_height = testimg.height();
@@ -58,13 +58,13 @@ void TriangleWindow::initialize()
     vertices << QVector2D(0.0, 0.0);
     vertices << QVector2D(1.0, 0.0);
     vertices << QVector2D(1.0, 1.0);
-    vertices << QVector2D(0.0, 1.0);
+    vertices << QVector2D(0.0, 1.0);*/
 
 }
 
 void TriangleWindow::render()
 {
-    const qreal retinaScale = devicePixelRatio();
+    /*const qreal retinaScale = devicePixelRatio();
     glViewport(0, 0, width() * retinaScale, height() * retinaScale);
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -104,7 +104,7 @@ void TriangleWindow::render()
     m_program.release();
 
     glDisable(GL_DEPTH_TEST);
-    glDisable(GL_CULL_FACE);
+    glDisable(GL_CULL_FACE);*/
 
     ++m_frame;
 }
